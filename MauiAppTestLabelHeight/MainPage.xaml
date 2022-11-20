@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTestLabelHeight.MainPage">
+
+    <ScrollView>
+        <Grid RowDefinitions="50, Auto, 50, Auto, 50, 50, 50"
+              ColumnDefinitions="160, 160, 40*"
+              Margin="8"
+              ColumnSpacing="6"
+              RowSpacing="12">
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                VerticalTextAlignment="End"
+                Text="Padding = 0 or 1" />
+            
+            <Label x:Name="lblExplanation1"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   LineBreakMode="WordWrap"
+                   Padding="1"
+                   BackgroundColor="Yellow"
+                   TextColor="Black" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                VerticalTextAlignment="End"
+                Text="Padding = 2 or > 1 : Last line of text is missing." />
+
+            <Label x:Name="lblExplanation2"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   LineBreakMode="WordWrap"
+                   Padding="2"
+                   BackgroundColor="Yellow"
+                   TextColor="Black" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
